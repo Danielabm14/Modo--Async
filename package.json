@@ -1,0 +1,30 @@
+{
+  "name": "modo-async",
+  "version": "1.0.0",
+  "description": "Modo Asincrono",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon promises/1_simples.js "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Danielabm14/Modo--Async.git"
+  },
+  "keywords": [
+    "es6",
+    "es2015",
+    "modo",
+    "asincrono"
+  ],
+  "author": "Daniela Baena",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Danielabm14/Modo--Async/issues"
+  },
+  "homepage": "https://github.com/Danielabm14/Modo--Async#readme",
+  "dependencies": {
+    "nodemon": "^2.0.20",
+    "request": "^2.88.2",
+    "xmlhttprequest": "^1.8.0"
+  }
+}
