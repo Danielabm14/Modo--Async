@@ -11,13 +11,13 @@ const url = "https://pokeapi.co/api/v2/type"
 function get_data(endpoint , exito , fallo){
     let promise = new Promise(function(resolve , rejected){
   
-    //crear el objeto de conexion 
+    //2.crear el objeto de conexion 
     const h = new http()
-    //abrir una conexin a la API
+    //3.abrir una conexin a la API
     h.open('GET', endpoint)
-    //enviar a la request definida
+    //4.enviar a la request definida
     h.send() 
-    //una vez recibida la response, tratar la info 
+    //5.una vez recibida la response, tratar la info 
     h.onload = function(){
         if(h.status === 200){
         resolve(h.responseText)
@@ -45,6 +45,15 @@ const exito = data => {
         console.log(status)
         }
 
-get_data(url).then(function(data){
-    exito(data)
-})
+  const f = async function(){
+    try{
+        let response =  await get_data(url)
+        exito(response)
+  }catch(status){
+         fallo(status)
+  }
+
+}
+
+  f()
+
